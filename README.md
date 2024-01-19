@@ -1,10 +1,18 @@
-# Getting Started with Create React App
+# Getting Started with Assignment-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as an assignment.
 
-## Available Scripts
+## Installation steps
 
-In the project directory, you can run:
+After you clone the repository you can run:
+
+### `yarn`
+
+This will install all the dependancies that the app requires.
+
+## Add environment variables
+
+Open the .env file in the root file of the repo and replace the dummy keys with the provided actual keys.
 
 ### `yarn start`
 
@@ -18,6 +26,10 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn test --coverage`
+
+Runs tests for the project using Yarn and generates a code coverage report.
 
 ### `yarn build`
 
@@ -38,6 +50,29 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Testing push notifications
+For testing the app push notifications you can push a notification using postman.
+
+### url
+`https://fcm.googleapis.com/fcm/send`
+
+### method
+`POST`
+
+### headers
+`{authorization : key="rest api key provided"}`
+
+### body
+`{
+  "to" : "Client token - inspect the app console to get it",
+   "notification" : {
+         "title" : "*title of notification*",
+          "body" : "*body of notification*",
+          }
+}`
+
+
 
 ## Learn More
 
