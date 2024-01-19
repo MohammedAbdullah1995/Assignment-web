@@ -1,0 +1,65 @@
+{
+  "login": {
+      "selectCountry": "Sélectionnez le pays",
+      "signIn": "Se connecter",
+      "rememberMe": "Se souvenir de moi",
+      "labels": {
+          "username": "Nom d'utilisateur",
+          "password": "Mot de passe"
+      },
+      "errorMessages": {
+          "noAuth": "Nom d'utilisateur ou mot de passe incorrect !",
+          "sysError": "Oups ! Quelque chose s'est mal passé !"
+      }
+  },
+  "validations": {
+      "required": "Ce champ est requis",
+      "email": "Format d'email invalide",
+      "uae": {
+          "username": "Le nom d'utilisateur doit être alphanumérique et avoir au moins 5 caractères"
+      },
+      "in": {
+          "username": "Le nom d'utilisateur doit commencer par une lettre et avoir au moins 6 caractères"
+      },
+      "eg": {
+          "username": "Le nom d'utilisateur doit commencer par 2 lettres et contenir au moins un chiffre"
+      },
+      "pk": {
+          "username": "Le nom d'utilisateur doit commencer par 3 lettres et avoir au moins 7 caractères"
+      }
+  },
+  "components": {
+      "deposits": {
+          "title": "Dépôts récents",
+          "linkText": "Voir le solde"
+      },
+      "orders": {
+          "title": "Commandes récentes",
+          "linkText": "Voir plus de commandes",
+          "tableHeads": {
+              "date": "Date",
+              "name": "Nom",
+              "shipTo": "Expédié à",
+              "paymentMethod": "Moyen de paiement",
+              "saleAmount": "Montant de la vente"
+          }
+      },
+      "listItem": {
+          "dashboard": "Tableau de bord",
+          "orders": "Commandes",
+          "customers": "Clients",
+          "reports": "Rapports",
+          "integrations": "Intégrations"
+      },
+      "chart": {
+          "title": "Aujourd'hui",
+          "yLabel": "Ventes"
+      },
+      "userInfo": {
+          "title": "Informations utilisateur",
+          "username": "Nom d'utilisateur",
+          "country": "Pays",
+          "email": "E-mail"
+      }
+  }
+}

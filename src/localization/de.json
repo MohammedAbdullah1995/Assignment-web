@@ -1,0 +1,65 @@
+{
+    "login": {
+        "selectCountry": "Land auswählen",
+        "signIn": "Anmelden",
+        "rememberMe": "Mich erinnern",
+        "labels": {
+            "username": "Benutzername",
+            "password": "Passwort"
+        },
+        "errorMessages": {
+            "noAuth": "Falscher Benutzername oder falsches Passwort!",
+            "sysError": "Hoppla! Etwas ist schief gelaufen!"
+        }
+    },
+    "validations": {
+        "required": "Dieses Feld ist erforderlich",
+        "email": "Ungültiges E-Mail-Format",
+        "uae": {
+            "username": "Benutzername muss alphanumerisch sein und mindestens 5 Zeichen lang sein"
+        },
+        "in": {
+            "username": "Benutzername muss mit einem Buchstaben beginnen und mindestens 6 Zeichen lang sein"
+        },
+        "eg": {
+            "username": "Benutzername muss mit 2 Buchstaben beginnen und mindestens eine Zahl enthalten"
+        },
+        "pk": {
+            "username": "Benutzername muss mit 3 Buchstaben beginnen und mindestens 7 Zeichen lang sein"
+        }
+    },
+    "components": {
+        "deposits": {
+            "title": "Aktuelle Einzahlungen",
+            "linkText": "Kontostand anzeigen"
+        },
+        "orders": {
+            "title": "Aktuelle Bestellungen",
+            "linkText": "Mehr Bestellungen anzeigen",
+            "tableHeads": {
+                "date": "Datum",
+                "name": "Name",
+                "shipTo": "Versand nach",
+                "paymentMethod": "Zahlungsmethode",
+                "saleAmount": "Verkaufsbetrag"
+            }
+        },
+        "listItem": {
+            "dashboard": "Dashboard",
+            "orders": "Bestellungen",
+            "customers": "Kunden",
+            "reports": "Berichte",
+            "integrations": "Integrationen"
+        },
+        "chart": {
+            "title": "Heute",
+            "yLabel": "Verkäufe"
+        },
+        "userInfo": {
+            "title": "Benutzerinformationen",
+            "username": "Benutzername",
+            "country": "Land",
+            "email": "E-Mail"
+        }
+    }
+}
