@@ -12,6 +12,8 @@ import reducer from './context/reducer';
 import initialAppState from './context/state';
 import { DispatchContext, StateContext } from './context';
 import { COUNTRY_NAME } from './util/enums';
+import Notification from './components/Notification';
+
 
 // The main App component
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <StateContext.Provider value={contextState}>
           {/* Provide the application dispatcher globally */}
           <DispatchContext.Provider value={contextDispatch as any}>
+            <Notification/>
             {/* Use RouterProvider for routing */}
             <RouterProvider router={router} />
           </DispatchContext.Provider>
