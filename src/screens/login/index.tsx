@@ -17,7 +17,7 @@ import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
 import CountrySelect from '../../components/CountrySelect';
 import { DispatchContext } from '../../context';
-import { updateCountry } from '../../context/actions';
+import { authenticateUser, updateCountry } from '../../context/actions';
 import { COUNTRY_NAME } from '../../util/enums';
 import { useForm, Controller } from 'react-hook-form';
 import { commonRules, validateUsername } from '../../util/constants';
@@ -50,6 +50,11 @@ export default function SignIn() {
     },
   });
 
+  // User is signed out
+  React.useEffect(()=>{
+    dispatchContext(authenticateUser(true))
+  },[])
+
   // Event handler for country change
   const handleCountryChange = (value: any) => {
     setSelectedCountry(value?.countryName);
@@ -64,6 +69,8 @@ export default function SignIn() {
     if (result?.authenticated) {
       const { country, email, username } = result;
       dispatchContext(updateCountry(country as COUNTRY_NAME));
+      // set user as authenticated
+      dispatchContext(authenticateUser(true))
       // navigate to dashboard
       navigate('dashboard', { state: { country, email, username } });
     } else {

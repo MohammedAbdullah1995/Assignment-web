@@ -1,8 +1,8 @@
 // The main App component that wraps the entire application
 
 // Import necessary dependencies and components
-import { RouterProvider } from 'react-router-dom';
-import router from './routes';
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './routes';
 import { ThemeProvider } from '@emotion/react';
 import getTheme from './themes/getTheme';
 import { I18nextProvider } from 'react-i18next';
@@ -31,7 +31,9 @@ function App() {
           <DispatchContext.Provider value={contextDispatch as any}>
             <Notification/>
             {/* Use RouterProvider for routing */}
-            <RouterProvider router={router} />
+            <BrowserRouter>
+            <AppRoutes/>
+            </BrowserRouter>
           </DispatchContext.Provider>
         </StateContext.Provider>
       </I18nextProvider>

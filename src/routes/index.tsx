@@ -3,20 +3,20 @@
  * Configures the routes using react-router-dom.
  */
 
-import { createBrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SignIn from "../screens/login";
 import Dashboard from '../screens/Dashboard';
+import ProtectedRoutes from './ProtectedRoutes'
 
-// Define the routes with their corresponding components
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <SignIn />,
-    },
-    {
-        path: '/dashboard',
-        element: <Dashboard />,
-    },
-]);
+export const AppRoutes = () => {
+    return (
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    );
+  };
 
-export default router;
+export default AppRoutes;
